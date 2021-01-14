@@ -58,8 +58,9 @@ Here is an example how configuration might look like:
 [server]
 port = 8080
 # Bind a specific IP addresses for server ,"*": bind all IP addresses which is default option, localhost or 127.0.0.1  bind a single IPv4 address
-bind_address = "172.20.10.2" 
-# Specify path for reverse proxy and only [A-Za-z0-9]
+bind_address = "127.0.0.1" 
+// Specify path for reverse proxy and this is related to URL path which only match Regex "[A-Za-z0-9]"
+// example: 127.0.0.1:8080/path
 path = "test"
 data_dir = "/app/data" # Don't change if you run podsync via docker
 

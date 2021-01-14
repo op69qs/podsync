@@ -76,7 +76,8 @@ type Server struct {
 	// "*": bind all IP addresses which is default option
 	// localhost or 127.0.0.1  bind a single IPv4 address
 	BindAddress string `toml:"bind_address"`
-	// Specify path for reverse proxy and only [A-Za-z0-9]
+	// Specify path for reverse proxy and this is related to URL path which only match Regex "[A-Za-z0-9]"
+	// example : 127.0.0.1:8080/path
 	Path string `toml:"path"`
 	// DataDir is a path to a directory to keep XML feeds and downloaded episodes,
 	// that will be available to user via web server for download.
